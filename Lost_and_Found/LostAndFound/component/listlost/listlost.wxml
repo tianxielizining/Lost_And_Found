@@ -1,0 +1,20 @@
+<!--component/listfound/listfound.wxml-->
+<view class='item'>
+  <view class='lcontent'>
+    <image src='{{item.image}}' />
+    <view class='right'>
+      <view class='content' style='border-bottom: thin solid #ececec;'>
+        <view class='label'>物品：</view>
+        <view class='value'>{{item.type_num}}</view>
+      </view>
+      <view class='content' style='border-bottom: thin solid #ececec;'>
+        <view class='label'>丢失时间：</view>
+        <view class='value'>{{item.lost_date}}</view>
+      </view>
+      <view class='content'>
+        <view class='label'>丢失地点：</view>
+        <view class='value'>{{item.location}}</view>
+      </view>
+    </view>
+  </view>
+</view>

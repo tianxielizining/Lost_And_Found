@@ -1,0 +1,40 @@
+<!--pages/postlost.wxml-->
+<form bindsubmit="formSubmit" report-submit="true">
+  <view class="container">
+    <textarea class='desc-text-area' placeholder='物品描述' placeholder-class='desc-place-holder' name='note'></textarea>
+
+    <view class='item-image'>
+      <image src='../../images/addImg.png' class='placeholder' data-type='pickPic' bindtap='onTap' wx:if="{{imgUrl==''}}" />
+      <image` class='image' src='{{imgUrl}}' data-type='pickPic' bindtap='onTap' />
+    </view>
+
+    <view class="item" style='margin-top:30rpx;'>
+      <text>丢失时间</text>
+      <input name="lostTime" value="{{currTime}}" />
+      <picker mode="multiSelector" value="{{multiIndex}}" range="{{multiArray}}" bindchange="bindMultiPickerChange">
+        <image src="/images/Date.png" />
+      </picker>
+    </view>
+
+    <view class="item">
+      <text>丢失地点</text>
+      <input name="lostTime" value='{{location}}' />
+      <image src="/images/Locat.png" data-type='location' bindtap='selectLocation' />
+    </view>
+
+    <view class="item">
+      <text>联系方式</text>
+      <input name="contact" value='' />
+    </view>
+
+    <view class="item">
+      <text>物品类别</text>
+      <input name="lostTime" disabled="true" value='{{foundtype}}' />
+      <picker bindchange="bindPickerChange" value='0' range="{{TYPE}}">
+        <image src='/images/select_type.png'></image>
+      </picker>
+    </view>
+
+    <button class='btn' form-type="submit">我要发布</button>
+  </view>
+</form>

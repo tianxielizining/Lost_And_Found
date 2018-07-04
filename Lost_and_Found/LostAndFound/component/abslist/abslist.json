@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "found": "/component/listfound/listfound",
+    "lost": "/component/listlost/listlost"
+  }
+}

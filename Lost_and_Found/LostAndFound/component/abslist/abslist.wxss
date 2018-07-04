@@ -1,0 +1,20 @@
+/* component/abslist/abslist.wxss */
+
+.list-scroll {
+  width: 750rpx;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  margin-top: 20rpx;
+  width: 100%;
+  align-items: center;
+}
+
+.empty {
+  position: absolute;
+  left: 300rpx;
+  top: 100rpx;
+  color: #acacac;
+}

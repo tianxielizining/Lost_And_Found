@@ -1,0 +1,4 @@
+<!--pages/aroundlist/aroundlist.wxml-->
+<view class='container'>
+  <list is-lost="{{isLost}}" list='{{goodList}}'/>
+</view>

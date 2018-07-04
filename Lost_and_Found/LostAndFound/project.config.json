@@ -1,0 +1,64 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.9",
+	"appid": "wx8fb6b0e11d78879f",
+	"projectname": "%E5%A4%B1%E7%89%A9%E6%8B%9B%E9%A2%86",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "postlost",
+					"pathName": "pages/postlost/postlost",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "postfound",
+					"pathName": "pages/postfound/postfound",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "postfound",
+					"pathName": "pages/itemdetail/itemdetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				}
+			]
+		}
+	}
+}

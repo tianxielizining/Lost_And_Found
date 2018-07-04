@@ -1,0 +1,19 @@
+<!--component/sideslide/sideslide.wxml-->
+<view class='content'>
+  <view class='item' style='margin-top:50rpx;' id='0' catchtap='onTap'>
+    <image src='../../images/Mine.png' />
+    <text>个人中心</text>
+  </view>
+  <view class='item' id='1' catchtap='onTap'>
+    <image src='../../images/llost.png' />
+    <text>寻找的物品</text>
+  </view>
+  <view class='item' id='2' catchtap='onTap'>
+    <image src='../../images/lfound.png' />
+    <text>拾到的物品</text>
+  </view>
+  <view class='item' id='3' bindopensetting='openSetting'>
+    <image src='../../images/lsetting.png' />
+    <button open-type="openSetting" catchtap='onTap'>设置</button>
+  </view>
+</view>

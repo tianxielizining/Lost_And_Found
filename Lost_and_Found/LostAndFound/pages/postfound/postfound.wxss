@@ -1,0 +1,6 @@
+@import "../../utils/post";
+
+
+.bg{
+  background-color: #159A8D;
+}

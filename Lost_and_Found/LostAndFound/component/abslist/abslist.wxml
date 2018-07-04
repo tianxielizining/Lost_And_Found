@@ -1,0 +1,8 @@
+<view class='empty'>列表为空</view>
+<scroll-view scroll-y="true" class='list-scroll'>
+  <view class='content' wx:for="{{list}}" id='{{index}}' bindtap='onDetail'>
+    <lost wx:if="{{isLost==1}}" item='{{item}}'/>
+    <found wx:else item='{{item}}'/>
+  </view>
+
+</scroll-view>

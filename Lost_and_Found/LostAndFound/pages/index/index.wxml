@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="container">
+  <!--  侧边栏  -->
+  <slide bind:hideSlide="onTapSlide" bind:onList="onListTap" />
+
+  <view class='map-view' animation='{{animation}}'>
+    <map id="lafMap" wx:if="{{map}}" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" bindregionchange="bindregionchange" polyline="{{polyline}}" markers="{{markers}}" controls="{{controls}}" bindmarkertap="bindmarkertap" bindcontroltap="controltap"
+      show-location style='opacity:{{opacity}}'>
+      <cover-view class="cover-view" animation='{{animDetail}}'>
+        <cover-view class='item' style='margin-top:20rpx;'>
+          <cover-view class='label'>
+            物品:
+          </cover-view>
+          <cover-view class='content'>
+            {{detail.good.value}}
+          </cover-view>
+        </cover-view>
+        <cover-view class='item'>
+          <cover-view class='label'>
+            地点:
+          </cover-view>
+          <cover-view class='content'>
+            {{detail.location.value}}
+          </cover-view>
+        </cover-view>
+        <cover-view class='item'>
+          <cover-view class='label'>
+            {{detail.date.label}}:
+          </cover-view>
+          <cover-view class='content'>
+            {{detail.date.value}}
+          </cover-view>
+        </cover-view>
+        <cover-view class='item' wx:if="{{detail.date.label=='捡到时间'}}">
+          <cover-view class='label'>
+            {{detail.pick_location.label}}:
+          </cover-view>
+          <cover-view class='content'>
+            {{detail.pick_location.value}}
+          </cover-view>
+        </cover-view>
+        <cover-view class='item' wx:if='{{detail.note.length!=0}}'>
+          <cover-view class='label'>
+            备注:
+          </cover-view>
+          <cover-view class='content'>
+            {{detail.note}}
+          </cover-view>
+        </cover-view>
+
+        <cover-view class='item' id='{{detail.tel}}' bindtap="onCall">
+          <cover-view class='label'>
+            联系方式:
+          </cover-view>
+          <cover-view class='content'>
+            {{detail.tel}}
+          </cover-view>
+        </cover-view>
+        <cover-image src='{{detail.image}}' class='cover-image' data-url='{{detail.image}}' bindtap='onPreview' />
+      </cover-view>
+    </map>
+  </view>
+</view>
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModalLocation}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}" wx:if="{{!hasUserInfo && canIUse}}">
+  <text class='mhead'>提醒</text>
+  <text class='mcontent'>本小程序需要获取您的用户信息以对您的身份进行识别，请授权用户信息权限。</text>
+  <button bindtap="go" class='btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+</view>
+
+<view class="modalDlg" wx:if="{{showModalLocation}}">
+  <text class='mhead'>警告</text>
+  <text class='mcontent'>没有获取位置权限，小程序无法正常运行</text>
+  <button bindtap="go" class='btn' open-type="openSetting">去授权</button>
+</view>

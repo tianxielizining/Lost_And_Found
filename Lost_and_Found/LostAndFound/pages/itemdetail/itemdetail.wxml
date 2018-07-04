@@ -1,0 +1,34 @@
+<!--pages/itemdetail/itemdetail.wxml-->
+<view class='container'>
+  <image src='{{item.image}}' class="image" bindtap='preView'></image>
+  <view class='item' style='margin-top:50rpx;'>
+    <text>{{content.date}}</text>
+    <text class='content'>{{item.date}}</text>
+  </view>
+
+  <view class='item'>
+    <text>{{content.location}}</text>
+    <text class='content'>{{item.location}}</text>
+  </view>
+
+  <view class='item' wx:if="{{isLostItem==0}}">
+    <text>{{content.pickLocation}}</text>
+    <text class='content'>{{item.pick_location}}</text>
+  </view>
+
+  <view class='item'>
+    <text>{{content.tel}}</text>
+    <text class='content'>{{item.tel}}</text>
+  </view>
+  <view class='item'>
+    <text>{{content.note}}</text>
+    <text class='content'>{{item.note}}</text>
+  </view>
+  <button wx:if='{{!isMine}}' class="btn {{isLostItem==0?'':'lost-bg'}}" bindtap='onTap'>{{content.btn}}</button>
+  <view class='mineView' wx:else>
+    <!-- <view class='left-list'>
+      <image src='../../images/ellipsis.png'></image>
+    </view>
+    <view class="finish {{isLostItem?'':'lost-bg'}}">完成</view> -->
+  </view>
+</view>

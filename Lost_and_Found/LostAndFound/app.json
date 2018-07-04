@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/postlost/postlost",
+    "pages/postfound/postfound",
+    "pages/itemdetail/itemdetail",
+    "pages/mine/mine",
+    "pages/aroundlist/aroundlist"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "失物招领",
+    "navigationBarTextStyle": "black"
+  }
+}

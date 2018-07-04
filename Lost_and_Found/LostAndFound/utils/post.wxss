@@ -1,0 +1,94 @@
+/* pages/postlost.wxss */
+
+.desc-text-area {
+  width: 92%;
+  height: 200rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+  font-size: 14px;
+  font-weight: 100;
+  padding: 15rpx 15rpx 15rpx 10rpx;
+  box-shadow: 2px 2px 5px 3px #eee;
+}
+
+.desc-place-holder {
+  font-size: 12px;
+  color: #a9a9a9;
+  font-weight: 100;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-start;
+  /* margin-top: 20rpx; */
+  margin-bottom: 10rpx;
+  width: 700rpx;
+  box-shadow: 1px 1px 5px 2px #eee;
+  border-radius: 2px;
+  padding: 5rpx 10rpx 5rpx 10rpx;
+}
+
+.item text {
+  color: #a5a5a5;
+  font-size: 12px;
+  width: 120rpx;
+}
+
+.item input {
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: black;
+  font-weight: 100;
+  letter-spacing: 0;
+  line-height: 14px;
+  width: 500rpx;
+  padding: 10rpx 0 10rpx 10rpx;
+}
+
+.item image {
+  width: 37rpx;
+  height: 37rpx;
+  margin-left: 20rpx;
+}
+
+.item-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-start;
+  margin-top: 40rpx;
+  width: 630rpx;
+}
+
+.item-image text {
+  color: black;
+  font-size: 14px;
+}
+
+.item-image .image {
+  width: 150rpx;
+  height: 150rpx;
+  border: thin solid #a9a9a9;
+}
+
+.item-image .placeholder {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 90rpx;
+}
+
+.btn {
+  margin-top: 70rpx;
+  font-size: 14px;
+  background-color: #fd683f;
+  color: white;
+  width: 700rpx;
+}
+
+button::after {
+  border: none;
+}
